@@ -366,41 +366,7 @@
                 </ol>
             </nav>
         </div>
-
-        <script type="module">
-            import { default as ActionMenu } from './src/ActionMenu.js';
-            import { default as EventEmitter } from './src/EventEmitter.js';
-            import { default as Manager } from './src/Manager.js';
-
-            import { default as NoteListItem } from './src/components/NoteListItem.js';
-            import { default as NoteList } from './src/components/NoteList.js';
-            import { default as SimpleList } from './src/components/SimpleList.js';
-            import { default as TableEditable } from './src/components/TableEditable.js';
-            import { default as SkillListing } from './src/components/SkillListing.js';
-            import { default as AttributeListing } from './src/components/AttributeListing.js';
-            import { default as EditableField } from './src/components/EditableField.js';
-            /**
-            * Register service worker if it's supported
-            */
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('service_worker.js', {
-                    scope: '/'
-                });
-            }
-
-            const emitter = new EventEmitter();
-            ActionMenu.initialize(emitter);
-
-            Manager.initialize({
-                emitter: emitter,
-                prefix: 'charsheet-5e-',
-                appname: 'character-sheet-5e'
-            });
-        </script>
-        <script nomodule>
-            alert('Sorry, you must use a modern browser for this to code to work.');
-        </script>
-
+        
         <template id="introAlert">
             <h2 id="dialog-label" tabindex="-1">Character Sheet. 5e.</h2>
             <p>An online character sheet for 5th edition D&amp;D, usable offline (in some browsers).</p>
@@ -408,6 +374,7 @@
             <p><strong>Warning:</strong> Character data is saved to your browser's local storage. This means it can be erased if you delete browser data and will not automatically transfer between browsers even on the same computer. Please Save and Backup often (or at least at the end of every gaming session)!</p>
             <p>This message will only appear until you save your first character.</p>
         </template>
+
         <template id="helpDialog">
             <h1 id="dialog-label" tabindex="-1">Help</h1>
 
@@ -499,5 +466,9 @@
             <ul id="character_list">
             </ul>
         </template>
+
+        <script src="main.js"></script>
+
+
     </body>
 </html>

@@ -19,7 +19,8 @@
     "versioncache": "node build/version_bump.js",
     "build": "npm run concat:css",
     "serve": "http-server ./ -a localhost --cors",
-    "release": "standard-version -a"
+    "release": "standard-version -a",
+    "start:dev": "webpack-dev-server"
   },
   "keywords": [
     "d&d",
@@ -38,7 +39,12 @@
     "minifyify": "^7.3.5",
     "normalize.css": "^8.0.1",
     "replace-in-file": "^5.0.2",
-    "standard-version": "^7.1.0"
+    "sass": "^1.22.10",
+    "sass-loader": "^7.2.0",
+    "standard-version": "^7.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "standard-version": {
     "scripts": {
